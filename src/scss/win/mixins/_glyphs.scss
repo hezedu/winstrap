@@ -10,3 +10,11 @@
         content: glyph($name);
     }
 }
+
+@function map-deep-get($map, $keys...) {
+    $value: $map;
+    @each $key in $keys {
+        $value: map-get($value, $key);
+    }
+    @return $value;
+}
