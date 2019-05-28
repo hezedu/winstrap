@@ -1,0 +1,17 @@
+// Microsoft MDL color palette
+
+// WHEN DEFINING COLORS...
+// Opacity is the primary device used to ensure proper contrast ratio
+// When $color-type-secondary calls for #000000 at 60%, it actually wants some transparency, rather than an opaque 60% grey
+// Use HEX for colors with 100% opacity
+// Use RGBA for colors with < 100% opacity
+// You can convert HEX to RGBA using the rgba($color, opacity) function
+
+//
+// Color classes
+//
+
+// Base colors
+.color-fill-accent-vivid-high {
+    background-color: $color-accent-vivid-high;
+}

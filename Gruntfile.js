@@ -10,7 +10,7 @@ module.exports = function (grunt) {
     },
 
     fileExists: {
-      css: ['./dist/css/winstrap.min.css']
+      css: ['./dist/css/winstrap-optional.css']
     },
 
     sass: {
@@ -24,7 +24,7 @@ module.exports = function (grunt) {
         },
         dist: {
           files: {
-            './dist/css/winstrap.css': './src/scss/winstrap.scss',
+            // './dist/css/winstrap.css': './src/scss/winstrap.scss',
             './dist/css/winstrap-optional.css': './src/scss/winstrap-optional.scss'
           }
         }
@@ -55,50 +55,7 @@ module.exports = function (grunt) {
             src: '**',
             dest: './dist/fonts/'
           },
-          {
-            expand: true,
-            cwd: './src/images/',
-            src: '*',
-            dest: './dist/images/'
-          },
-          
-          //  Copy vendor js to dist and www
-          {
-            expand: true,
-            cwd: 'node_modules/jquery/dist/',
-            src: ['jquery.min.js', 'jquery.min.map'],
-            dest: 'dist/js/vendor/'
-          },
-          {
-            expand: true,
-            cwd: 'node_modules/bootstrap-sass/assets/javascripts/',
-            src: 'bootstrap.min.js',
-            dest: 'dist/js/vendor/'
-          },
-          {
-            expand: true,
-            cwd: 'dist/js/vendor',
-            src: ['jquery.min.js', 'jquery.min.map'],
-            dest: 'www/js/vendor/'
-          },
-          {
-            expand: true,
-            cwd: 'dist/js/vendor',
-            src: 'bootstrap.min.js',
-            dest: 'www/js/vendor/'
-          },
-          {
-            expand: true,
-            cwd: './src/fonts/',
-            src: '**',
-            dest: './www/fonts/'
-          },
-          {
-            expand: true,
-            cwd: './src/images/',
-            src: '*',
-            dest: './www/images/'
-          }
+
         ]
       },
       
@@ -238,6 +195,6 @@ module.exports = function (grunt) {
   grunt.loadNpmTasks('grunt-notify');
   grunt.loadNpmTasks('grunt-contrib-jshint');
 
-  grunt.registerTask('default', ['clean', 'sass', 'cssmin', 'assemble', 'copy', 'fileExists', 'jshint']);
+  grunt.registerTask('default', ['clean', 'sass', 'cssmin', 'copy', 'fileExists']);
   grunt.registerTask('server', ['connect', 'notify:server', 'watch']);
 };

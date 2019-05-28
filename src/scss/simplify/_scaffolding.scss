@@ -1,0 +1,24 @@
+// a {
+//     &:hover {
+//         text-decoration: underline;
+//     }
+
+//     &:active {
+//         text-decoration: none;
+//         color: mix($color-type-accent, $color-black, 90%);
+//     }
+
+//     &:focus {
+//         @include tab-focus;
+//     }
+
+// }
+body {
+    font-size: $font-size-base;
+    line-height: $line-height-base;
+}
+h1, h2, h3, h4, h5, h6, p {
+    margin: 0;
+}
+
+

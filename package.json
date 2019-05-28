@@ -6,11 +6,16 @@
     "url": "git+https://github.com/winjs/winstrap.git"
   },
   "files": [
-    "dist/css/winstrap.min.css",
-    "dist/js/vendor/bootstrap.min.js",
-    "dist/fonts"
+    "index.js",
+    "dist/fonts/LICENSE.txt",
+    "dist/fonts/selawk.eot",
+    "dist/fonts/selawk.ttf",
+    "dist/fonts/selawkl.eot",
+    "dist/fonts/selawkl.ttf",
+    "dist/fonts/glyphs",
+    "dist/css/winstrap-optional.min.css"
   ],
-  "version": "0.5.14",
+  "version": "0.5.15",
   "author": "Microsoft",
   "contributors": [
     "Frederic Perrin",
